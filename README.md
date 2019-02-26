@@ -8,17 +8,16 @@ ________________________________________________________________________________
 
 
 
-                
-          ##
-                        
-             select nome in "${opcoes[@]}"
-#    do
+   ##
+   
+    select nome in "${opcoes[@]}"
+      do
         case $nome in
                 "dependencias")
-                sudo apt-get install git -y && sudo apt-get install wget -y
+                sudo apt-get install git -y && sudo apt-get install wget -y <<<<--- Altere aqui
                 ;;
                 "zsh")
-                sudo apt-get install zsh
+                sudo apt-get install zsh <<<<<---- Altere aqui
                 ;;
                 "oh-my-zsh")
                 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
@@ -34,5 +33,4 @@ ________________________________________________________________________________
                 ;;
                 *)echo "opção invalida";;
                
-                      
-                
+ Obs:: Quando você alterar as partes, é bom tambem que retire o prefixo -y, pois algumas Distros não o aceitam.      
