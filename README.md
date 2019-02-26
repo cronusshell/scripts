@@ -6,14 +6,19 @@ no Script passará por atualizações, mas até o presente momento ele está pro
 
 __________________________________________________________________________________________________________________________
 
-##select nome in "${opcoes[@]}"
-do
+
+
+                
+          ##
+                        
+             select nome in "${opcoes[@]}"
+#    do
         case $nome in
                 "dependencias")
-                sudo apt-get install git -y && sudo apt-get install wget -y  <<<<---- Alterações deve ser feita aqui.
+                sudo apt-get install git -y && sudo apt-get install wget -y
                 ;;
                 "zsh")
-                sudo apt-get install zsh <<<<<---- Aqui tambem.
+                sudo apt-get install zsh
                 ;;
                 "oh-my-zsh")
                 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
@@ -28,10 +33,6 @@ do
                 break
                 ;;
                 *)echo "opção invalida";;
-                
-                --------------------------------------------------------------------------------------------
-                
-                
-                OBS:: Em alguns sistemas o prefixo -y não é aceito, tambem aconselho que retire ele... o prefixo serve para pular a parte da permissão de instalação, que geralmente o sistema pergunta; seria uma resposta prévia.
-                
+               
+                      
                 
